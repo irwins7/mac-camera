@@ -1,11 +1,15 @@
 var capacitorMacCamera = (function (exports, core) {
-	'use strict';
+    'use strict';
 
-	const MacCamera = core.registerPlugin('MacCamera');
+    const MacCamera = core.registerPlugin('MacCamera');
+    function isMacCatalyst() {
+        return core.Capacitor.getPlatform() === 'ios' && navigator.userAgent.includes('Macintosh');
+    }
 
-	exports.MacCamera = MacCamera;
+    exports.MacCamera = MacCamera;
+    exports.isMacCatalyst = isMacCatalyst;
 
-	return exports;
+    return exports;
 
 })({}, capacitorExports);
 //# sourceMappingURL=plugin.js.map

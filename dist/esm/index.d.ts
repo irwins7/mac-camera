@@ -1,4 +1,4 @@
 import type { MacCameraPlugin } from './definitions';
-declare const MacCamera: MacCameraPlugin;
+export declare const MacCamera: MacCameraPlugin;
+export declare function isMacCatalyst(): boolean;
 export * from './definitions';
-export { MacCamera };
