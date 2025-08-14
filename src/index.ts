@@ -1,7 +1,10 @@
-import { registerPlugin } from '@capacitor/core';
+import { registerPlugin, Capacitor } from '@capacitor/core';
 import type { MacCameraPlugin } from './definitions';
 
-const MacCamera = registerPlugin<MacCameraPlugin>('MacCamera');
+export const MacCamera = registerPlugin<MacCameraPlugin>('MacCamera');
+
+export function isMacCatalyst(): boolean {
+  return Capacitor.getPlatform() === 'ios' && navigator.userAgent.includes('Macintosh');
+}
 
 export * from './definitions';
-export { MacCamera };
