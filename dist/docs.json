@@ -1,0 +1,87 @@
+{
+  "api": {
+    "name": "MacCameraPlugin",
+    "slug": "maccameraplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "listDevices",
+        "signature": "() => Promise<{ devices: MacCameraDevice[]; }>",
+        "parameters": [],
+        "returns": "Promise<{ devices: MacCameraDevice[]; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "MacCameraDevice"
+        ],
+        "slug": "listdevices"
+      },
+      {
+        "name": "startSession",
+        "signature": "(options: { deviceId: string; }) => Promise<{ started: boolean; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ deviceId: string; }"
+          }
+        ],
+        "returns": "Promise<{ started: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "startsession"
+      },
+      {
+        "name": "capturePhoto",
+        "signature": "() => Promise<{ path: string; }>",
+        "parameters": [],
+        "returns": "Promise<{ path: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "capturephoto"
+      },
+      {
+        "name": "stopSession",
+        "signature": "() => Promise<{ stopped: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ stopped: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopsession"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "MacCameraDevice",
+      "slug": "maccameradevice",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
