@@ -1,7 +1,7 @@
 import Capacitor
 import AVFoundation
 
-@objc(MacCameraPlugin)
+@objc(MacCamera)
 public class MacCameraPlugin: CAPPlugin {
     private var captureSession: AVCaptureSession?
     private var photoOutput: AVCapturePhotoOutput?
